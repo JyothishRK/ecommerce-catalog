@@ -1,0 +1,47 @@
+.header {
+  width: 100%;
+  height: 6rem;
+  background-color: var(--color-grey-900);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Ensures items align vertically */
+  gap: 1rem; /* Adds spacing between navigation items */
+  margin: 0;
+  padding: 0;
+}
+
+.header li {
+  margin: 0; /* No need for extra margin if using gap */
+}
+
+.header a {
+  color: var(--color-grey-100);
+  font-size: var(--size-4);
+  text-decoration: none; /* Removes underline */
+  padding: 0.5rem 1rem; /* Adds padding around links */
+  border-radius: 4px; /* Optional: adds slight rounding to hover effect */
+}
+
+.header a:hover,
+.header a:active,
+.header a.active {
+  color: var(--color-grey-200);
+  background-color: var(--color-grey-800); /* Optional: adds a hover background */
+}
+
+@media (min-width: 768px) {
+  .header ul {
+      gap: 1.5rem; /* Increases spacing between items on larger screens */
+  }
+
+  .header a {
+      font-size: var(--size-5);
+  }
+}
