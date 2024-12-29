@@ -19,7 +19,7 @@ export async function getStaticProps(context) {
   const { params } = context;
   const productId = params.productId;
   const response = await fetch(
-    "https://ecommerce-catalog-i19b.onrender.com/products/" + productId
+    process.env.API_GETBYID_URL + productId
   );
   const data = await response.json();
   const product = data.product;

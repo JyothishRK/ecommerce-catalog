@@ -1,35 +1,27 @@
 import Link from "next/link";
 
-function AllProductsPage(props) {
-  const products = props.products;
-  if (!products) {
-    return <div>Loading Data</div>;
-  }
+import AllProductsPage from "../../components/products/all-products";
+
+function ProductsPage(props) {
+
 
   return (
-    <ul>
-      {products.map((product) => (
-        <Link href={"/products/" + product._id}>
-            <li id={product._id}>{product.name}</li>
-        </Link>
-      ))}
-    </ul>
+      <AllProductsPage products={props.products} />
   );
 }
 
-export default AllProductsPage;
+export default ProductsPage;
 
 export async function getStaticProps() {
-    const response = await fetch(
-      'https://ecommerce-catalog-i19b.onrender.com/products'
-    );
-    const data = await response.json();
-    const recievedProducts = data.products
-  
-    return {
-      props: {
-        products: recievedProducts,
-      },
-      revalidate: 10,
-    };
-  }
+  const apiUrl = process.env.API_GETALL_URL;
+  const response = await fetch(apiUrl);
+  const data = await response.json();
+  const recievedProducts = data.products;
+
+  return {
+    props: {
+      products: recievedProducts,
+    },
+    revalidate: 10,
+  };
+}
