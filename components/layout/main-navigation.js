@@ -13,7 +13,7 @@ function MainNavigation() {
         <ul>
           <li>
             <Link href="/products">Products</Link>
-            <Link href="/contact">About Me</Link>
+            <Link href="/about">About Me</Link>
           </li>
         </ul>
       </nav>
