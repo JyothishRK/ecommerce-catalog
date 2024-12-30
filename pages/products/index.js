@@ -6,6 +6,7 @@ function ProductsPage(props) {
 
 
   return (
+    
       <AllProductsPage products={props.products} />
   );
 }

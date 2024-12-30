@@ -14,13 +14,18 @@ function ProductItem(props) {
     <li className={classes.product}>
       <Link href={linkPath}>
         <div className={classes.image}>
-        {/* <Image
-        src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          {/* <Image
+        src='https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         alt="Nature"
         width={200}
         height={150}
         layout="responsive"
       /> */}
+          <img
+            src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            height={200}
+            width={250}
+          />
         </div>
         <div className={classes.content}>
           <h3>{name}</h3>

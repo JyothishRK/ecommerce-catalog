@@ -1,15 +1,16 @@
 import Link from "next/link";
 
+import ProductPage from "../../components/products/product-page/product-page";
+
 function ProductDetailPage(props) {
   const product = props.product;
-  if (!product) {
-    return <div>Loading Data</div>;
-  }
 
+  if (!product) {
+    return <div>Loading Data...</div>;
+  }
+  // console.log(props)
   return (
-    <ul>
-      <li id={product._id}>{product.name}</li>
-    </ul>
+    <ProductPage props = {props} />
   );
 }
 
@@ -18,6 +19,7 @@ export default ProductDetailPage;
 export async function getStaticProps(context) {
   const { params } = context;
   const productId = params.productId;
+
   const response = await fetch(
     process.env.API_GETBYID_URL + productId
   );

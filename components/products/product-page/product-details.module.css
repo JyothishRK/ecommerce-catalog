@@ -1,0 +1,38 @@
+.detailsContainer {
+  padding: 16px;
+}
+
+.productName {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.productDescription {
+  font-size: 16px;
+  color: #555;
+}
+
+.productPrice {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.productCategory {
+  font-size: 14px;
+  color: #2a1a1a;
+}
+
+.addToCartButton {
+  padding: 10px 20px;
+  margin-top: 16px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addToCartButton:hover {
+  background-color: #005bb5;
+}
