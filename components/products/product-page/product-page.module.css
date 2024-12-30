@@ -1,10 +1,11 @@
 .productPage {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Align items near the top */
   gap: 20px;
-  margin: 40px;
+  margin: 20px auto; /* Center horizontally and add some margin */
+  padding-top: 40px; /* Add space at the top */
   flex-wrap: wrap;
   text-align: center;
-  height: 100vh; /* Full page height for centering */
+  min-height: 75vh; /* Maintain a balanced height for the layout */
 }
