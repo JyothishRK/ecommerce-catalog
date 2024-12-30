@@ -1,11 +1,25 @@
 .productPage {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Align items to the left */
   align-items: flex-start; /* Align items near the top */
   gap: 20px;
   margin: 20px auto; /* Center horizontally and add some margin */
   padding-top: 40px; /* Add space at the top */
   flex-wrap: wrap;
-  text-align: center;
+  text-align: left; /* Align text to the left */
   min-height: 75vh; /* Maintain a balanced height for the layout */
+}
+
+.productPage > * {
+  flex: 1; /* Allow both ProductImage and ProductDetails to share available space */
+}
+
+.ProductImage {
+  flex: 0 0 auto; /* Ensure ProductImage keeps its natural size */
+  max-width: 100%; /* Make sure image doesn't overflow */
+}
+
+.ProductDetails {
+  flex: 1; /* Allow ProductDetails to take up remaining space */
+  text-align: left; /* Align the product details to the left */
 }

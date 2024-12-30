@@ -3,24 +3,25 @@
 }
 
 .productName {
+  color: white;
   font-size: 24px;
   font-weight: bold;
 }
 
 .productDescription {
   font-size: 16px;
-  color: #070505;
+  color: white;
 }
 
 .productPrice {
   font-size: 20px;
   font-weight: bold;
-  color: #333;
+  color: white;
 }
 
 .productCategory {
   font-size: 14px;
-  color: #2a1a1a;
+  color: burlywood;
 }
 
 .addToCartButton {

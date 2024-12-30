@@ -29,7 +29,7 @@ function HomePage(props) {
             </div>
 
             {/* Features Section */}
-            <div style={{ padding: '20px 0', maxWidth: '800px', margin: '0 auto' }}>
+            <div style={{ padding: '20px 0', maxWidth: '800px', margin: '0 auto', color: 'white'}}>
                 <h2 style={{ marginBottom: '20px', fontSize: '2rem' }}>Why Choose Product-Vault?</h2>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                     <li style={{ marginBottom: '15px', fontSize: '1.2rem' }}>
