@@ -8,7 +8,6 @@ function ProductDetailPage(props) {
   if (!product) {
     return <div>Loading Data...</div>;
   }
-  // console.log(props)
   return (
     <ProductPage props = {props} />
   );
