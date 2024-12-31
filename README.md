@@ -1,40 +1,171 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# E-Commerce Product Catalog
 
-## Getting Started
+## Project Description
+The E-Commerce Product Catalog is a dynamic application for managing and displaying products. It includes essential CRUD operations, search and filter functionality, dynamic routing, and API integration. The project is divided into a React-based frontend (built with Next.js) and a Node.js-based backend with MongoDB.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+### Frontend:
+- Display a list of products.
+- Dynamic product details page.
+- Search and filter functionality.
+- Responsive design using modular CSS.
+
+### Backend:
+- API endpoints for CRUD operations.
+- MongoDB database for storing product information.
+- Integration with frontend using REST APIs.
+
+---
+
+## Directory Structure
+```plaintext
+JyothishRK-ecommerce-catalog/
+├── next.config.mjs
+├── components/
+│   ├── search/
+│   │   ├── search-bar.module.css
+│   │   └── search-bar.js
+│   ├── products/
+│   │   ├── product-item.js
+│   │   ├── all-products.module.css
+│   │   ├── all-products.js
+│   │   ├── product-page/
+│   │   │   ├── product-details.module.css
+│   │   │   ├── product-page.js
+│   │   │   ├── product-image.module.css
+│   │   │   ├── product-page.module.css
+│   │   │   ├── product-details.js
+│   │   │   └── product-image.js
+│   │   ├── products-grid.js
+│   │   ├── product-item.module.css
+│   │   └── products-grid.module.css
+│   └── layout/
+│       ├── footer.module.css
+│       ├── layout.js
+│       ├── main-navigation.js
+│       ├── logo.module.css
+│       ├── main-navigation.module.css
+│       ├── footer.js
+│       └── logo.js
+├── public/
+├── styles/
+│   └── globals.css
+├── package.json
+├── jsconfig.json
+├── pages/
+│   ├── _app.js
+│   ├── products/
+│   │   ├── [productId].js
+│   │   └── index.js
+│   ├── about.js
+│   └── index.js
+├── README.md
+└── server/
+    ├── models/
+    │   └── product.js
+    ├── routes/
+    │   └── products.js
+    ├── index.js
+    └── db/
+        └── mongoose.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Setup Instructions
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Frontend Setup:
+1. Navigate to the frontend root directory:
+   ```bash
+   cd JyothishRK-ecommerce-catalog
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Configure environment variables:
+   - Create a `.env.local` file in the project root.
+   - Add the following variables:
+     ```env
+     API_GETALL_URL=<Backend_AllProducts_URL>
+     API_GETBYID_URL=<Backend_ProductById_URL>
+     ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Access the application at: `http://localhost:3000`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Backend Setup:
+1. Navigate to the backend root directory:
+   ```bash
+   cd JyothishRK-ecommerce-catalog
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Configure environment variables:
+   - Ensure the `.env` file in the root directory contains the following variables:
+     ```env
+     MONGODB_URL=<Your_MongoDB_Connection_String>
+     PORT=5000
+     ```
+4. Start the backend server:
+   ```bash
+   node server/index.js
+   ```
+5. The backend server will run at: `http://localhost:5000`
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## API Endpoints
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### Products API:
+- **GET /products** - Retrieve the list of all products.
+- **GET /products/:id** - Retrieve details of a specific product.
+- **GET /productsearch/search** - Retrieve search results based on the query.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Steps to Run the Application Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/JyothishRK/ecommerce-catalog.git
+   ```
+2. Follow the setup instructions for both frontend and backend.
+3. Run both the frontend and backend servers simultaneously.
+4. Access the application at `http://localhost:3000`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## Live Deployment Links
+- **Frontend:** [E-Commerce Catalog Frontend](https://ecommerce-catalog-tcp3.vercel.app)
+- **Backend:** [E-Commerce Catalog Backend](https://ecommerce-catalog-i19b.onrender.com/)
+
+---
+
+## Dependencies
+- React
+- Next.js
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- CSS Modules
+
+---
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+## Author
+R K Jyothish  
+[GitHub Profile](https://github.com/JyothishRK)
+
