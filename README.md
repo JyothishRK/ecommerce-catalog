@@ -91,6 +91,7 @@ JyothishRK-ecommerce-catalog/
      ```env
      API_GETALL_URL=<Backend_AllProducts_URL>
      API_GETBYID_URL=<Backend_ProductById_URL>
+     API_SEARCH_URL=<Backend_Search_URL>
      ```
 4. Start the development server:
    ```bash
