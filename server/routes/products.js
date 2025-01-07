@@ -37,14 +37,17 @@ router.get("/products/:id", async (req, res) => {
 });
 
 
-// GET Product Search (by name only)
+// GET Product Search (by name and category)
 router.get("/productsearch/search", async (req, res) => {
-  const { query } = req.query; // Query parameter for search, e.g. ?query=laptop
-  console.log(query);
+  const { query } = req.query;
+  // console.log("Search query:", query);
 
   try {
     const products = await Product.find({
-      name: { $regex: query, $options: "i" }
+      $or: [
+        { name: { $regex: query, $options: "i" } },
+        { category: { $regex: query, $options: "i" } }
+      ]
     });
     res.json({ products });
   } catch (error) {

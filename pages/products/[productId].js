@@ -17,12 +17,10 @@ export default ProductDetailPage;
 export async function getStaticProps(context) {
   const { params } = context;
   const productId = params.productId;
-
+  
   try {
-    // Fetch product data by ID
     const response = await fetch(`${process.env.API_GETBYID_URL}${productId}`);
     if (!response.ok) {
-      // Handle invalid product ID or API failure
       return { notFound: true };
     }
 
@@ -44,7 +42,7 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   try {
     // Fetch all products to pre-render their paths
-    const response = await fetch("https://ecommerce-catalog-i19b.onrender.com/products");
+    const response = await fetch(`${process.env.API_GETALL_URL}`);
     if (!response.ok) {
       throw new Error("Failed to fetch products");
     }
